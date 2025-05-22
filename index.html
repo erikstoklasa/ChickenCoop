@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatické Dvířka pro Kurník | Smart Řešení pro Chovatele</title>
+    <style>
+        :root {
+            --primary-color: #2C3E50;
+            --accent-color: #E67E22;
+            --background-color: #F9FAFB;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            background: #F8FAFC;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-title {
+            font-size: 3.5rem;
+            color: #1E293B;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .product-description {
+            font-size: 1.2rem;
+            color: #64748B;
+            margin-bottom: 3rem;
+            max-width: 90%;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            position: relative;
+            padding: 0.5rem;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            fill: #F97316;
+        }
+
+        .feature-text {
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .feature-text strong {
+            display: block;
+            color: #1E293B;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #F97316;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #EA580C;
+            transform: translateY(-2px);
+        }
+
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #475569;
+        }
+
+        .contact-info a {
+            color: #F97316;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: #EA580C;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-info {
+                order: 2;
+                padding: 1rem;
+            }
+
+            .product-image {
+                order: 1;
+            }
+
+            .product-title {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .feature::before {
+                left: -1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="hero">
+        <div class="container">
+            <div class="product-info">
+                <h1 class="product-title">Automatické dveře do kurníku</h1>
+                <p class="product-description">
+                    Řešení pro moderní chovatele drůbeže. Plně automatická dvířka s OLED displejem, jednoduchou instalací a spolehlivým provozem pro váš kurník.
+                </p>
+                <div class="features">
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24">
+                            <path d="M20,10V8H4V18H20V16H22V10H20M16,14H8V10H16V14Z"/>
+                        </svg>
+                        <span class="feature-text">
+                            <strong>Napájení na baterie</strong>
+                            klasické 4x1,5V AA baterie
+                        </span>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24">
+                            <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                        </svg>
+                        <span class="feature-text">
+                            <strong>Automatické otevírání</strong>
+                            dle cirkadiálního rytmu slepic<br>
+                            tah do 25N
+                        </span>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24">
+                            <path d="M9,5V9H21V5M9,19H21V15H9M9,14H21V10H9M4,9H8V5H4M4,19H8V15H4M4,14H8V10H4V14Z"/>
+                        </svg>
+                        <span class="feature-text">
+                            <strong>Jednoduché ovládání</strong>
+                            snadná instalace<br>
+                            OLED display prostředí
+                        </span>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="feature-text">
+                            <strong>Česká výroba</strong>
+                            spolehlivá a opravitelná konstrukce
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    Pro objednání kontaktujte: <a href="mailto:hello@erikstoklasa.cz">hello@erikstoklasa.cz</a>
+                </div>
+            </div>
+            <div class="product-image">
+                <img src="box-wf.png" alt="Automatická dvířka pro kurník">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
